@@ -11,22 +11,20 @@ class PengumumanDesaPage extends StatelessWidget {
   Widget build(BuildContext context) {
     return BasePage(
       bodyContent: Padding(
-        padding: const EdgeInsets.all(16.0), // Padding di sekitar konten
+        padding: const EdgeInsets.all(16.0),
         child: Column(
           crossAxisAlignment: CrossAxisAlignment.start,
           children: [
-            // Judul Pengumuman
             Text(
               'Pengumuman Desa',
               style: TextStyle(
                 fontSize: 28,
                 fontWeight: FontWeight.bold,
-                color: const Color.fromARGB(255, 15, 11, 11), // Warna biru gelap untuk judul
+                color: const Color.fromARGB(255, 15, 11, 11),
               ),
             ),
             SizedBox(height: 16),
             
-            // Daftar pengumuman menggunakan ListView untuk scrollable
             Expanded(
               child: ListView(
                 children: [
@@ -49,7 +47,6 @@ class PengumumanDesaPage extends StatelessWidget {
               ),
             ),
             
-            // Total Pengumuman
             Padding(
               padding: const EdgeInsets.only(top: 16.0),
               child: Text(
@@ -57,31 +54,30 @@ class PengumumanDesaPage extends StatelessWidget {
                 style: TextStyle(
                   fontSize: 16,
                   fontWeight: FontWeight.bold,
-                  color: const Color.fromARGB(255, 15, 11, 11), // Warna biru gelap untuk teks penting
+                  color: const Color.fromARGB(255, 15, 11, 11),
                 ),
               ),
             ),
           ],
         ),
       ),
-      selectedIndex: 4, // Pengumuman tab is selected
+      selectedIndex: 4,
       controller: controller,
     );
   }
 
-  // Widget untuk card pengumuman
   Widget _buildPengumumanCard(String text) {
     return Card(
       margin: EdgeInsets.only(bottom: 10),
       elevation: 4,
-      color: const Color.fromARGB(255, 78, 129, 240), // Latar belakang dark untuk card
+      color: const Color.fromARGB(255, 78, 129, 240),
       child: Padding(
         padding: const EdgeInsets.all(12.0),
         child: Text(
           text,
           style: TextStyle(
             fontSize: 16,
-            color: const Color.fromARGB(255, 15, 11, 11), // Teks putih untuk kontras dengan latar belakang gelap
+            color: const Color.fromARGB(255, 15, 11, 11),
           ),
         ),
       ),

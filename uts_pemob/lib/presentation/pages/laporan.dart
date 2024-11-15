@@ -23,17 +23,15 @@ class LaporanMasyarakatPage extends StatelessWidget {
         child: Column(
           crossAxisAlignment: CrossAxisAlignment.start,
           children: [
-            // Judul Laporan Masyarakat dengan warna dark blue
             Text(
               'Laporan Masyarakat',
               style: TextStyle(
                 fontSize: 24,
                 fontWeight: FontWeight.bold,
-                color: Colors.black, // Dark Blue untuk judul
+                color: Colors.black,
               ),
             ),
             SizedBox(height: 16),
-            // Menampilkan daftar laporan masyarakat dengan kotak pink
             Expanded(
               child: ListView.builder(
                 itemCount: laporanData.length,
@@ -41,7 +39,7 @@ class LaporanMasyarakatPage extends StatelessWidget {
                   return Card(
                     margin: EdgeInsets.all(8.0),
                     elevation: 4,
-                    color: Colors.pink[50], // Menggunakan warna pink pastel untuk latar belakang card
+                    color: Colors.pink[50],
                     shape: RoundedRectangleBorder(
                       borderRadius: BorderRadius.circular(12),
                     ),
@@ -51,16 +49,15 @@ class LaporanMasyarakatPage extends StatelessWidget {
                         'Laporan ${index + 1}',
                         style: TextStyle(
                           fontWeight: FontWeight.bold,
-                          color: Colors.blue[800], // Hitam untuk title laporan
+                          color: Colors.blue[800],
                         ),
                       ),
                       subtitle: Text(
                         laporanData[index]['masalah']!,
-                        style: TextStyle(color: Colors.black), // Hitam untuk teks masalah
+                        style: TextStyle(color: Colors.black),
                       ),
                       isThreeLine: true,
                       onTap: () {
-                        // Aksi ketika laporan diklik, bisa ditambah dengan aksi detail laporan
                       },
                     ),
                   );
@@ -68,18 +65,17 @@ class LaporanMasyarakatPage extends StatelessWidget {
               ),
             ),
             SizedBox(height: 16),
-            // Total laporan yang tersedia dengan warna pink pastel
             Text(
               'Total Laporan: ${laporanData.length} Masalah',
               style: TextStyle(
                 fontSize: 16,
-                color: Colors.black, // Pink pastel untuk total laporan
+                color: Colors.black,
               ),
             ),
           ],
         ),
       ),
-      selectedIndex: 3, // Laporan tab is selected
+      selectedIndex: 3,
       controller: controller,
     );
   }

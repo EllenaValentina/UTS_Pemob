@@ -30,7 +30,6 @@ class DataWilayahPage extends StatelessWidget {
               ),
             ),
             SizedBox(height: 16),
-            // Menampilkan informasi batas wilayah
             Text(
               'Batas Wilayah: \n'
               'Utara - Sungai A\n'
@@ -44,7 +43,6 @@ class DataWilayahPage extends StatelessWidget {
               ),
             ),
             SizedBox(height: 16),
-            // Menampilkan jumlah RT/RW
             Text(
               'Jumlah RT/RW: 10 RT / 5 RW',
               style: TextStyle(
@@ -53,7 +51,6 @@ class DataWilayahPage extends StatelessWidget {
               ),
             ),
             SizedBox(height: 32),
-            // List data wilayah
             Expanded(
               child: ListView.builder(
                 itemCount: wilayahData.length,
@@ -67,18 +64,17 @@ class DataWilayahPage extends StatelessWidget {
                       title: Text(
                         wilayahData[index]['nama']!,
                         style: TextStyle(
-                          color: Colors.blue[800], // Warna teks dark blue untuk judul
+                          color: Colors.blue[800], 
                         ),
                       ),
                       subtitle: Text(
                         'Luas: ${wilayahData[index]['luas']}\n'
                         'Penduduk: ${wilayahData[index]['penduduk']}',
                         style: TextStyle(
-                          color: Colors.blueGrey, // Warna dark blue-grey untuk subtitle
+                          color: Colors.blueGrey,
                         ),
                       ),
                       onTap: () {
-                        // Aksi ketika wilayah diklik, bisa ditambah dengan aksi detail wilayah
                       },
                     ),
                   );
@@ -88,7 +84,7 @@ class DataWilayahPage extends StatelessWidget {
           ],
         ),
       ),
-      selectedIndex: 1, // Data Wilayah tab is selected
+      selectedIndex: 1, 
       controller: controller,
     );
   }

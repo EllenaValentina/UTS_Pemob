@@ -23,17 +23,15 @@ class FasilitasUmumPage extends StatelessWidget {
         child: Column(
           crossAxisAlignment: CrossAxisAlignment.start,
           children: [
-            // Mengubah warna judul menjadi hitam
             Text(
               'Fasilitas Umum Desa',
               style: TextStyle(
                 fontSize: 24,
                 fontWeight: FontWeight.bold,
-                color: Colors.black, // Menetapkan warna hitam untuk judul
+                color: Colors.black,
               ),
             ),
             SizedBox(height: 16),
-            // Menampilkan daftar fasilitas umum
             Expanded(
               child: ListView.builder(
                 itemCount: fasilitasData.length,
@@ -42,19 +40,19 @@ class FasilitasUmumPage extends StatelessWidget {
                     margin: EdgeInsets.all(8.0),
                     elevation: 4,
                     child: Container(
-                      color: Colors.pink[50], // Warna kotak kalimat menjadi pink
+                      color: Colors.pink[50],
                       child: ListTile(
                         contentPadding: EdgeInsets.all(16.0),
                         title: Text(
                           fasilitasData[index]['nama']!,
-                          style: TextStyle(color: Colors.blue[800]), // Warna teks fasilitas menjadi biru
+                          style: TextStyle(color: Colors.blue[800]),
                         ),
                         subtitle: Text(
                           'Jenis: ${fasilitasData[index]['jenis']}',
-                          style: TextStyle(color: Colors.black), // Warna teks jenis menjadi biru
+                          style: TextStyle(color: Colors.black),
                         ),
                         onTap: () {
-                          // Aksi ketika fasilitas diklik, bisa ditambah dengan aksi detail
+
                         },
                       ),
                     ),
@@ -63,18 +61,18 @@ class FasilitasUmumPage extends StatelessWidget {
               ),
             ),
             SizedBox(height: 16),
-            // Total fasilitas yang tersedia dengan warna hitam
+
             Text(
               'Total Fasilitas: ${fasilitasData.length} Lokasi',
               style: TextStyle(
                 fontSize: 16,
-                color: Colors.black, // Menetapkan warna hitam untuk total fasilitas
+                color: Colors.black, 
               ),
             ),
           ],
         ),
       ),
-      selectedIndex: 2, // Fasilitas Umum tab is selected
+      selectedIndex: 2, 
       controller: controller,
     );
   }
